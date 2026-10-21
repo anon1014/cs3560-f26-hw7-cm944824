@@ -1,0 +1,5 @@
+Result:
+test cases:   7 |   6 passed | 1 failed
+assertions: 217 | 216 passed | 1 failed
+
+Each test case checks multiple things, so there are many more assertions compared to the number of test cases.

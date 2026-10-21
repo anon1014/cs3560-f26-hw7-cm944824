@@ -1,0 +1,65 @@
+Randomness seeded to: 2979851603
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests is a Catch2 v3.16.1 host application.
+Run with -? for options
+
+-------------------------------------------------------------------------------
+Pushing exactly capacity items fills the stack without error
+-------------------------------------------------------------------------------
+test_bounded_stack.cpp:65
+...............................................................................
+
+test_bounded_stack.cpp:73: FAILED:
+  CHECK( stack.size() == 4 )
+with expansion:
+  5 == 4
+
+-------------------------------------------------------------------------------
+Popping an empty stack throws underflow_error
+-------------------------------------------------------------------------------
+test_bounded_stack.cpp:45
+...............................................................................
+
+test_bounded_stack.cpp:50: FAILED:
+  CHECK( stack.size() == 0 )
+with expansion:
+  1 == 0
+
+-------------------------------------------------------------------------------
+Pushing one item past capacity throws and leaves the contents unchanged
+-------------------------------------------------------------------------------
+test_bounded_stack.cpp:78
+...............................................................................
+
+test_bounded_stack.cpp:85: FAILED:
+  CHECK( stack.size() == 2 )
+with expansion:
+  3 == 2
+
+-------------------------------------------------------------------------------
+A stack holding one element pops that element and becomes empty
+-------------------------------------------------------------------------------
+test_bounded_stack.cpp:54
+...............................................................................
+
+test_bounded_stack.cpp:57: FAILED:
+  REQUIRE( stack.size() == 1 )
+with expansion:
+  2 == 1
+
+-------------------------------------------------------------------------------
+A newly constructed stack is empty and reports its capacity
+-------------------------------------------------------------------------------
+test_bounded_stack.cpp:30
+...............................................................................
+
+test_bounded_stack.cpp:35: FAILED:
+  CHECK( stack.size() == 0 )
+with expansion:
+  1 == 0
+
+===============================================================================
+test cases:  9 |  4 passed | 5 failed
+assertions: 38 | 33 passed | 5 failed
+
