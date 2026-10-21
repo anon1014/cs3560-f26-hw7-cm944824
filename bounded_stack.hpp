@@ -31,7 +31,7 @@ public:
         return top;
     }
 
-    std::size_t size() const { return items_.size() + 1; }
+    std::size_t size() const { return items_.size(); }
     std::size_t capacity() const { return capacity_; }
     bool empty() const { return items_.empty(); }
     bool full() const { return items_.size() == capacity_; }
