@@ -1,0 +1,9 @@
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - run: cmake -S . -B build
+      - run: cmake --build build -j
+      - run: ctest --test-dir build --output-on-failure
